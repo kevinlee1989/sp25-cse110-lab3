@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title>CSE110 Lab02</title>
+
+    <!-- Meta data for search engine -->
+    <!-- user cannot see directly -->
+    <meta name="description" content="Meeting minutes for our CSE110 Lab">
+    <meta name="author" content="Kevin Lee">
+
+    <!-- Favicon using my image -->
+    <link rel="icon" type="image/png" href="/screenshots/favicon-16x16.png" />
+  </head>
+  <body>
+    <!-- Header for my page -->
+    <header>
+        <!-- Navigating features to move quickly -->
+        <h1>Pomodoro Timer First Brainstorm</h1>
+        <nav>
+            <a href="#attendance">Attendance</a><br>
+            <a href="#agenda">Agenda</a><br>
+            <a href="#unfinished-business">Unfinished Business</a><br>
+            <a href="#new-business">New Business</a><br>
+            <a href="#misc">Miscellaneous Comments / Questions / Concerns</a><br>
+            <a href="#diagrams">Presented Diagrams</a><br>
+            <a href="#recordings">Meeting Recordings</a><br>
+            <a href="#form">Submit a form</a><br>
+        </nav>
+    </header>
+    
+    <!-- Main content of my homepage -->
+    <main>
+        <!-- distributing the section by id -->
+        <section id="attendance">
+            <h2>Attendance</h2>
+            <!-- ordering with unordered list-->
+            <ul>
+                <li>Kevin</li>
+                <li>Gon</li>
+                <li>Skyler</li>
+            </ul>
+        </section>
+
+        <!-- distributing the section by id -->
+        <section id="agenda">
+            <h2>Agenda</h2>
+            <!-- ordering with ordered list-->
+            <ol>
+                <li>Review previous tasks</li>
+                <li>Discuss and update new features</li>
+                <li>Set deadlines for new features</li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- Adding horizontal rules-->
+    <p>Agenda section ends here.</p>
+    <hr>
+    <p>Business starts below.</p>
+
+    <!-- Discussing about the unfinished business from the previous meetings-->
+    <section id="unfinished-business">
+        <h2>Unfinished Business</h2>
+        <!-- Wrapping this tag using div tag-->
+        <div class="Unfinished-Business">
+            <p>
+                <!-- Wrapping this tag using span tag-->
+                <span>UI/UX</span> updating pending review
+            </p>
+        </div>
+    </section>
+    
+    <!-- Discussing about the new business -->
+    <section id="new-business">
+        <!-- Using inline text semantics here -->
+        <h2>New Business</h2>
+        <div class="new-Business">
+            <ul>
+                <li>Discussed about <strong>final deadline</strong> for submission features.</li>
+                <li>Noted that the <em>core functionality</em> of this features is to have a convinent UI/UX design</li>
+            </ul>
+
+            <p>
+                Kevin noted that this project must completed by this Friday.<br>
+                Gon suggested a <b>quick demo</b> for next week.<br>
+                Skyler asked if she can have a <i>possible delay</i> to polish UI.<br>
+                    
+                For more details, refer to the <a href="#agenda">Agenda section</a>
+            </p>
+        </div>
+    </section>
+    <!-- Discussing about the Miscellaneous Comments / Questions / Concerns -->
+    <section id="misc">
+    <!-- implementing Interactive Elements -->
+        <h2>Miscellaneous Comments / Questions / Concerns</h2>
+        <details>
+            <summary>See the Questions and Concerns</summary>
+            <ul>
+                <li>Kevin asked if we can use Firebase.</li>
+                <li>Gon is concerned about time conflicts with another class project.</li>
+                <li>Skyler suggested creating a shared Google Calendar for task deadlines.</li>
+                <li><em>Is it okay to postpone the UI demo until next Monday?</em></li>
+            </ul>
+        </details>
+    </section>
+
+    <!-- Implementing image for the swe meetings -->
+    <section id="diagrams">
+        <h2>Presented Diagrams</h2>
+        <p>The following diagram was drawn during our discussion of the timer architecture:</p>
+        <img src="/screenshots/architecture-diagram.png" alt="Architecture diagram of the Pomodoro Timer app" width="600">
+      </section>
+
+
+    <!-- Implementing audio and recordings for the swe meetings -->
+    <section id="recordings">
+        <h2>Meeting Recordings</h2>
+      
+        <h3>Audio Recording</h3>
+        <audio controls>
+          <source src="/screenshots/swe meeting.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      
+        <h3>Video Recording</h3>
+        <video width="640" height="360" controls>
+          <source src="/screenshots/Kevin_intro_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Implementing basic form  -->
+    <section id="form">
+        <h2>
+            Feedback Form
+        </h2>
+
+        <form>
+            <fieldset>
+                <h2>Personal Info</h2>
+
+                <!-- Text for name  -->
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name"><br><br>
+
+                <!-- Text for Date -->
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate"><br><br>
+
+                <!-- Checkbox -->
+                <p>Preferred Programming Language :</p>
+                <label><input type="checkbox" name="fav-lang-C++"> C++</label><br>
+                <label><input type="checkbox" name="fav-lang-JavaScript"> JavaScript</label><br>
+                <label><input type="checkbox" name="fav-lang-Python"> Python</label><br>
+
+                <!-- Radio Button -->
+                <p>Preferred meeting time:</p>
+                <label><input type="radio" name="time" value="morning"> Morning</label><br>
+                <label><input type="radio" name="time" value="afternoon"> Afternoon</label><br>
+                <label><input type="radio" name="time" value="evening"> Evening</label><br><br>
+
+                <!-- Text area -->
+                <label for="comments">Comments:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br><br>
+
+                <!-- Dropdown -->
+                <label for="team-role">Your role:</label>
+                <select id="team-role" name="team-role">
+                    <option value="developer">Developer</option>
+                    <option value="designer">Designer</option>
+                    <option value="pm">Project Manager</option>
+                </select><br><br>
+
+                <!-- auto-complete datalist -->
+                <label for="fav-fruit">Favorite Fruit:</label>
+                <input list="fruit" id="fav-fruit" name="fav-fruit">
+                <datalist id="fruit">
+                    <option value="Apple">
+                    <option value="Banana">
+                    <option value="Orange">
+                </datalist><br><br>
+                
+                <!-- Submit button -->
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- Footer for my page-->
+    <footer>
+        <p> 2025 CSE110 Team 26</p>
+      </footer>
+  </body>
+</html>
