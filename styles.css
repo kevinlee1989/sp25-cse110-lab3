@@ -1,0 +1,137 @@
+/* Universal selector */
+* {
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+/* For main color green */
+:root {
+    --main-color: #4CAF50; 
+}
+
+header{
+    text-align:center;
+}
+  
+
+/* Basic background and text for body tag */
+body section{
+    /*  Background for entire page is bright gray */
+    background-color: #f2f2f2; 
+    /* Basic font to become Roboto
+    if fails to load then just basic font "sans-serif" */
+    font-family: 'Roboto', sans-serif; 
+    /* Main color to become color green
+    if --main-color is not declared then use green color.*/
+    color: var(--main-color, green); 
+}
+
+/* For navigation link style */
+nav a{
+    color: orange;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* pseudo-class
+ if user mouse goes to nav tag then change it to color red */ 
+nav a:hover {
+    color: red
+}
+
+#title{
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.4);
+}
+
+section {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+  /* For class content */
+  .content{
+    color: black;
+    font-family: 'Georgia', sans-serif; 
+  }
+
+    /* For class content1 */
+    .content1{
+        color: black;
+        font-family: 'Georgia', sans-serif; 
+        text-align: center;
+      }
+
+  .Audio {
+    display: block;
+    margin: 20px auto;          
+    background-color: green;    
+    padding: 10px;
+    border-radius: 8px;         
+  }
+
+  .Video {
+    display: block;
+    margin: 20px auto;
+  }
+
+  footer{
+    /* Make flex container so that it enables for chideren to have Horizontal */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  /* Attribute Selector and Selector List*/
+  input[type="checkbox"], input[type="radio"]{
+    accent-color: green;
+    width: 12px;
+    height: 12px;
+  }
+
+  /* p tag that comes right after h2 which is Presented Diagram description*/
+  h2 + p {
+    font-weight: bold;
+  }
+
+  h2 ~ p {
+    color: green;
+  }
+
+  /* For attendance list */
+  ul > li {
+    list-style-type: circle;
+  }
+
+  div.Unfinished-Business{
+    text-decoration: underline;
+    color: black;
+    text-decoration-style: dashed;
+  }
+
+
+  /* if user check the preferred programming language then highlight the box */
+  form:has(input[type="checkbox"]:checked){
+    border: 1px solid green;
+  }
+
+  #form{
+    text-align:center;
+  }
+
+  /* Resolving the change of the screen size */
+  /* if screen width is less than 600px then apply this style */
+@media (max-width: 600px) {
+    /* change it to bright blue if it is small screen */
+    body {
+      background-color: #e0f7fa;
+    }
+    /* change nav a links to have block and have 10px space */
+    nav a {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
