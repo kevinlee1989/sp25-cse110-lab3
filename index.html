@@ -3,6 +3,22 @@
   <head>
     <!-- Title -->
     <title>CSE110 Lab02</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- For lnternal CSS -->
+     <style>
+        button {
+            background-color: color-mix(in srgb, blue 20%, green 80%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: color-mix(in srgb, red 50%, green 50%);
+        }
+     </style>
 
     <!-- Meta data for search engine -->
     <!-- user cannot see directly -->
@@ -16,7 +32,7 @@
     <!-- Header for my page -->
     <header>
         <!-- Navigating features to move quickly -->
-        <h1>Pomodoro Timer First Brainstorm</h1>
+        <h1 id ="title">Pomodoro Timer First Brainstorm</h1>
         <nav>
             <a href="#attendance">Attendance</a><br>
             <a href="#agenda">Agenda</a><br>
@@ -35,7 +51,7 @@
         <section id="attendance">
             <h2>Attendance</h2>
             <!-- ordering with unordered list-->
-            <ul>
+            <ul class = "content">
                 <li>Kevin</li>
                 <li>Gon</li>
                 <li>Skyler</li>
@@ -46,7 +62,7 @@
         <section id="agenda">
             <h2>Agenda</h2>
             <!-- ordering with ordered list-->
-            <ol>
+            <ol class = "content">
                 <li>Review previous tasks</li>
                 <li>Discuss and update new features</li>
                 <li>Set deadlines for new features</li>
@@ -55,16 +71,16 @@
     </main>
 
     <!-- Adding horizontal rules-->
-    <p>Agenda section ends here.</p>
+    <p style="color: blue; font-style: italic; text-align: center; ">Agenda section ends here.</p>
     <hr>
-    <p>Business starts below.</p>
+    <p style="color: blue; font-style: italic; text-align: center;  ">Business starts below.</p>
 
     <!-- Discussing about the unfinished business from the previous meetings-->
     <section id="unfinished-business">
         <h2>Unfinished Business</h2>
         <!-- Wrapping this tag using div tag-->
         <div class="Unfinished-Business">
-            <p>
+            <p class = "content">
                 <!-- Wrapping this tag using span tag-->
                 <span>UI/UX</span> updating pending review
             </p>
@@ -76,12 +92,12 @@
         <!-- Using inline text semantics here -->
         <h2>New Business</h2>
         <div class="new-Business">
-            <ul>
+            <ul class = "content">
                 <li>Discussed about <strong>final deadline</strong> for submission features.</li>
                 <li>Noted that the <em>core functionality</em> of this features is to have a convinent UI/UX design</li>
             </ul>
 
-            <p>
+            <p style = "text-align:center">
                 Kevin noted that this project must completed by this Friday.<br>
                 Gon suggested a <b>quick demo</b> for next week.<br>
                 Skyler asked if she can have a <i>possible delay</i> to polish UI.<br>
@@ -94,8 +110,8 @@
     <section id="misc">
     <!-- implementing Interactive Elements -->
         <h2>Miscellaneous Comments / Questions / Concerns</h2>
-        <details>
-            <summary>See the Questions and Concerns</summary>
+        <details class = "content">
+            <summary >See the Questions and Concerns</summary>
             <ul>
                 <li>Kevin asked if we can use Firebase.</li>
                 <li>Gon is concerned about time conflicts with another class project.</li>
@@ -108,7 +124,7 @@
     <!-- Implementing image for the swe meetings -->
     <section id="diagrams">
         <h2>Presented Diagrams</h2>
-        <p>The following diagram was drawn during our discussion of the timer architecture:</p>
+        <p class = "content">The following diagram was drawn during our discussion of the timer architecture:</p>
         <img src="screenshots/architecture-diagram.png" alt="Architecture diagram of the Pomodoro Timer app" width="600">
       </section>
 
@@ -117,14 +133,14 @@
     <section id="recordings">
         <h2>Meeting Recordings</h2>
       
-        <h3>Audio Recording</h3>
-        <audio controls>
+        <h3 class = "content1">Audio Recording</h3>
+        <audio controls class = "Audio">
           <source src="screenshots/swe-meeting.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
       
-        <h3>Video Recording</h3>
-        <video width="640" height="360" controls>
+        <h3 class = "content1">Video Recording</h3>
+        <video width="640" height="360" controls class ="Video">
           <source src="screenshots/Kevin_intro_video.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -132,11 +148,11 @@
 
     <!-- Implementing basic form  -->
     <section id="form">
-        <h2>
+        <h2 >
             Feedback Form
         </h2>
 
-        <form>
+        <form class = "content">
             <fieldset>
                 <h2>Personal Info</h2>
 
@@ -190,6 +206,7 @@
     <!-- Footer for my page-->
     <footer>
         <p> 2025 CSE110 Team 26</p>
+        <p> Kevin Jaewoo Lee</p>
       </footer>
   </body>
 </html>
